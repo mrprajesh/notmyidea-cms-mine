@@ -4,3 +4,7 @@ This is a modified theme of [notmyidea-cms](https://github.com/getpelican/pelica
 
 ### Edited by
 [Rajesh Pandian M](https://www.cse.iitm.ac.in/~mrprajesh) (While at IITM)
+
+### Screenshot
+
+![My New Edits](https://raw.githubusercontent.com/mrprajesh/notmyidea-cms-mine/master/ScreenshotMine.png "Screenshot")
