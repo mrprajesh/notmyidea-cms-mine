@@ -20,7 +20,9 @@
         <!--[if lt IE 7]>
                 <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie6.css"/><![endif]-->
 		
+		
 		<script>
+			
 		function getLastModified() {
 			var x = new Date(document.lastModified);
 			document.getElementById("LDate").innerHTML = 'Last Modified on : '+x;
@@ -83,16 +85,22 @@
                 <div class="widget social">
                         <h2>Social</h2>
                         <ul>
-                            <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">atom feed</a></li>
-                            {% if FEED_RSS %}
-                            <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">rss feed</a></li>
-                            {% endif %}
-
+                        
                         {% for name, link in SOCIAL %}
                             <li><a href="{{ link }}"> {{ name }}</a></li>
                         {% endfor %}
+                            <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate"> Atom feed</a></li>
+                            {% if FEED_RSS %}
+                            <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate"> RSS feed</a></li>
+                            {% endif %}
+
                         </ul>
                 </div><!-- /.social -->
+                
+                <div>
+					<h2> Email Notification </h2>
+					<form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=mrprajesh', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="mrprajesh" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe via Email" /> </form>
+                </div>
         {% endif %}
         </aside><!-- /#sidebar -->
 		
